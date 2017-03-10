@@ -2,12 +2,13 @@ var config = {
 	entry : './main.js',
 	output : {
 		path : '/',
-		filename : 'index.js'
+		filename : 'bundle.js'
 	},
 	devServer : {
-		inline : true ,
+		inline : true,
 		 port: 8080
 	},
+	devtool : "source-map",
 	module : {
 		loaders : [{
 			test : /\.jsx?$/, 
@@ -15,7 +16,7 @@ var config = {
 			loader : 'babel-loader',
 
 			query : {
-				presets :['es2015','react']
+				presets :['es2015','react','stage-2']
 			}
 		}] 
 	}
